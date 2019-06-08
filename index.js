@@ -21,8 +21,8 @@ var times = (`[${hour}:${minute}:${second}]/`);
 
 client.on('ready', () => {
     console.log(times + `\x1b[33m%s\x1b[0m`, '[WARN]', '\x1b[0m', 'Connexion en cours...');
-    console.log(times + `\x1b[33m%s\x1b[0m`, '[WARN]', '\x1b[0m', 'Connexion à l\'API Discord.js en cours...');
-    console.log(times + `\x1b[32m%s\x1b[0m`, '[OK]', '\x1b[0m', 'Connexion à l\'API Discord.js effectuée');
+    console.log(times + `\x1b[33m%s\x1b[0m`, '[WARN]', '\x1b[0m', 'Connexion à l\'API Discord en cours...');
+    console.log(times + `\x1b[32m%s\x1b[0m`, '[OK]', '\x1b[0m', 'Connexion à l\'API Discord effectuée');
     console.log(times + `\x1b[36m%s\x1b[0m`, '[INFO]', '\x1b[0m', 'Connecté sur ' + client.user.username + '#' + client.user.discriminator);
     console.log(times + `\x1b[32m%s\x1b[0m`, '[OK]', '\x1b[0m', 'Chargement terminé');
     console.log(times + `\x1b[32m%s\x1b[0m`, '[OK]', '\x1b[0m', 'Prêt et connecté');
@@ -82,7 +82,7 @@ client.on('message', message => {
          ];
            if (banni.some(x => message.content.toLowerCase().split(/\s+/).includes(x))) {
              message.delete(message.author)
-             message.reply("ce mot est filtré sur ce serveur, votre message a donc été supprimé.")
+             message.reply("Ce mot est filtré sur ce serveur, votre message a donc été supprimé.")
            }  
     }
     });
